@@ -56,8 +56,10 @@
     .mandala:nth-child(3){width:330px;height:330px;border-color:rgba(212,160,23,0.09);animation-duration:38s;}
     @keyframes rotateSlow{to{transform:translate(-50%,-50%) rotate(360deg)}}
 
-    .hero-eyebrow { font-family:'Cinzel',serif; font-size:0.7rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:22px; position:relative; z-index:1; animation:fadeUp 1s ease both; }
-    .hero-eyebrow::before,.hero-eyebrow::after{content:'✦';margin:0 10px;opacity:0.6;}
+    .hero-eyebrow { display:flex; flex-direction:column; align-items:center; gap:4px; margin-bottom:22px; position:relative; z-index:1; animation:fadeUp 1s ease both; }
+    .hero-eyebrow .ey-name { font-family:'Cinzel Decorative',serif; font-size:1.35rem; letter-spacing:0.22em; color:var(--gold); text-transform:uppercase; }
+    .hero-eyebrow .ey-sub { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.28em; color:rgba(212,160,23,0.75); text-transform:uppercase; }
+    .hero-eyebrow .ey-presents { font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.45em; color:rgba(212,160,23,0.5); text-transform:uppercase; margin-top:2px; }
     .hero-logo-wrap { position:relative; z-index:1; animation:fadeUp 1s ease 0.12s both; margin-bottom:8px; }
     .hero-logo-wrap img { height:clamp(88px,19vw,170px); filter:drop-shadow(0 0 50px rgba(180,30,30,0.85)) drop-shadow(0 0 100px rgba(180,30,30,0.35)); }
     .hero-sub { font-family:'Cinzel',serif; font-size:clamp(0.68rem,1.3vw,0.88rem); letter-spacing:0.22em; text-transform:uppercase; color:var(--cream-dark); margin-top:8px; position:relative; z-index:1; animation:fadeUp 1s ease 0.26s both; }
@@ -230,7 +232,11 @@
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="mandala"></div><div class="mandala"></div><div class="mandala"></div>
-  <p class="hero-eyebrow">Arthvidya — VIPS Club of Economists Presents</p>
+  <div class="hero-eyebrow">
+    <span class="ey-name">Arthvidya</span>
+    <span class="ey-sub">VIPS Club of Economists</span>
+    <span class="ey-presents">✦ &nbsp; Presents &nbsp; ✦</span>
+  </div>
   <div class="hero-logo-wrap"><img src="sankaran-logo.png" alt="SANKARAN VER.2026"></div>
   <p class="hero-sub">Annual Intercollege Economics &amp; Business Fest &nbsp;·&nbsp; VIPS-TC, Delhi</p>
   <div class="hero-divider"></div>
