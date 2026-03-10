@@ -472,7 +472,7 @@ const events = [
     rules:["Open exclusively to school students, Classes IX–XII.","Teams of 4 members. Entry fee: ₹400 per team (₹100 per person).","Round 1 – Prelims (Online, 6th April Monday): The Brainwave Breakout — logic and rapid-fire questions.","Top teams qualify for the finals.","Round 2 – Finals (Offline, 10th April Friday at VIPS-TC): The Ultimate Ludo Playground.","Players become tokens on a giant life-size board — Power Cards create twists!"],
     coordinators:"Yashika Chadha: +91 7838182323 | Mahhi Kapoor: +91 9310314180 | Tanmay Ahuja: +91 97175 75254 | Khushi: +91 8076087330",
     formLink:"https://docs.google.com/forms/d/1bU2Ob06b6JRJjo0s1JcOBdGfd4in_0cSx2aP4wVXnMw/viewform"
-  }
+  },
   {
     id:10, name:"Game of Stranger Clicks",
     category:"Photography & Strategy",
@@ -524,6 +524,7 @@ const events = [
 ];
 
 // Render cards
+document.addEventListener('DOMContentLoaded', function() {
 const grid = document.getElementById('eventsGrid');
 events.forEach((ev, i) => {
   const card = document.createElement('div');
@@ -583,6 +584,7 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}); // end DOMContentLoaded
 </script>
 </body>
 </html>
